@@ -1,25 +1,23 @@
-import React from 'react';
-import ContactsForm from 'components/ContactForm/ContactForm';
-import Filter from 'components/Filter/Filter';
-import ContactItem from 'components/ContactList/ContactList';
+import { Contacts } from 'components/Contacts/Contacs';
+import { FindFilt } from 'components/Filter/Filter';
+import { Form } from 'components/ContactForm/ContactForm';
 
-import css from 'components/App/App.module.css';
-import { useSelector } from 'react-redux';
-
-const App = () => {
-  const getContacts = useSelector(state => state.contacts.contacts);
-
+export const App = () => {
   return (
-    <div className={css.container}>
-      <ContactsForm />
-      <Filter />
-      <ul className={css.itemList}>
-        {getContacts.map(({ id, name, number }) => (
-          <ContactItem key={id} id={id} name={name} number={number} />
-        ))}
-      </ul>
+    <div
+      style={{
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 40,
+        color: '#010101',
+        flexDirection: 'column',
+      }}
+    >
+      <Form />
+      <FindFilt />
+      <Contacts />
     </div>
   );
 };
-
-export default App;
