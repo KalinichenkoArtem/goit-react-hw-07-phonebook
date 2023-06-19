@@ -1,0 +1,39 @@
+ul {
+  padding: 0;
+}
+
+.list:nth-last-child(n + 2) {
+  margin-bottom: 10px;
+}
+
+.item {
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  background-color: whitesmoke;
+  border: 1px solid black;
+}
+
+.itemChild {
+  padding: 4px;
+}
+
+.itemButton {
+  padding: 4px;
+  display: block;
+  margin-right: 10px;
+  margin-left: auto;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+}
